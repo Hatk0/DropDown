@@ -8,17 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    @State private var selectedLanguages: [String] = []
 
-#Preview {
-    ContentView()
+    var body: some View {
+        MultiSelectedDropDownView(selectedLanguages: $selectedLanguages)
+    }
 }
